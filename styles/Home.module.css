@@ -51,7 +51,7 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 4rem 0 4;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -103,9 +103,40 @@
   line-height: 1.5;
 }
 
+.profile_pic {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.nav_header {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  bottom: 100px;
+}
+
+.nav_header a {
+  font-size: 1.25rem;
+}
+
+.nav {
+  position: absolute;
+  top: 16px;
+  right: 8px;
+}
+
+.nav_items {
+  margin-right: 1rem;
+}
+
+.pic_layout {
+  position: relative;
 }
 
 @media (max-width: 600px) {
