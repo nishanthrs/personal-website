@@ -20,8 +20,6 @@ export default function Home() {
         </div>
 
         <p className={styles.description}>
-          {/* Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code> */}
           {/* Just trying to make sense of this crazy world.
           Know the ledge. */}
           Yup, yet another personal website.

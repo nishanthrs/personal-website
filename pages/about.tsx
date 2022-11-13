@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 
 import Head from 'next/head'
-import AboutDesc from './markdowns/about_desc.mdx';
+import AboutDesc from './about_desc.mdx';
 
 export default function About() {
     return (
@@ -18,7 +18,6 @@ export default function About() {
                 </div>
                 <AboutDesc />
             </main>
-            <AboutDesc />
         </div>
     );
 }
