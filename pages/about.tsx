@@ -23,10 +23,10 @@ export default function About() {
                 <div className={styles.pic_layout}>
                     <img className={styles.profile_pic} src="/ns_profile_pic.jpg" alt="Avatar"/>
                 </div>
-                <article class="prose prose-lg dark:prose-invert text-center">
+                <article className="prose prose-lg dark:prose-invert text-center">
                     {aboutHeader}
                 </article>
-                <article class="prose prose-lg dark:prose-invert">
+                <article className="prose prose-lg dark:prose-invert">
                     <AboutDesc />
                 </article>
             </main>
