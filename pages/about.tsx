@@ -4,6 +4,13 @@ import Head from 'next/head'
 import AboutDesc from './about_desc.mdx';
 
 export default function About() {
+    const aboutHeader = (
+        <header>
+            <h1>About Me</h1>
+            <h3>Software | Business | Stories</h3>
+        </header>
+    );
+
     return (
         <div className={styles.container}>
             <Head>
@@ -16,7 +23,12 @@ export default function About() {
                 <div className={styles.pic_layout}>
                     <img className={styles.profile_pic} src="/ns_profile_pic.jpg" alt="Avatar"/>
                 </div>
-                <AboutDesc />
+                <article class="prose prose-lg dark:prose-invert text-center">
+                    {aboutHeader}
+                </article>
+                <article class="prose prose-lg dark:prose-invert">
+                    <AboutDesc />
+                </article>
             </main>
         </div>
     );
