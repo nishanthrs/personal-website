@@ -32,3 +32,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Debugging Errors
+
+### A way for me to keep track of errors so I don't go fucking insane with this ticky-tack bullshit.
+
+**Can't import module fs**:
+  * Means modules were not imported correctly due to:
+    * Incorrect path
+    * Attempt to import server-side types into client-side (i.e. types from getPosts.js imported into writing.tsx)
+    * https://stackoverflow.com/questions/70899450/nodejs-next-cannot-import-object-from-module-module-not-found-cant-resolve
+
+**Clickable link area outside of text**:
+  * Heading tag inside anchor tag
+  * https://stackoverflow.com/questions/68015331/why-is-my-link-clickable-outside-the-linked-text
