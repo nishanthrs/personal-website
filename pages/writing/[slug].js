@@ -1,7 +1,9 @@
-import {PostType, getPosts} from "../../helpers/getPosts";
+import {getPosts} from "../../helpers/getPosts";
 import getPost from "../../helpers/getPost";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+
+import {PostType} from '../../types/post';
 
 export const getStaticPaths = async () => {
   const posts = await getPosts(PostType.Writing);
