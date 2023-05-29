@@ -138,7 +138,7 @@
 
 .pic_layout {
   position: relative;
-  bottom: 32px;
+  bottom: 8px;
 }
 
 @media (max-width: 600px) {

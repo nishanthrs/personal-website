@@ -8,16 +8,16 @@ import styles from '../styles/Home.module.css'
 
 
 export const getStaticProps = () => {
-  const writingPosts = getPosts(PostType.Writing);
+  const notes = getPosts(PostType.Notes);
 
   return {
     props: {
-      writingPosts
+      notes
     },
   };
 };
 
-export default function Writing({writingPosts}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,21 +27,18 @@ export default function Writing({writingPosts}: InferGetStaticPropsType<typeof g
       </Head>
 
       <main className="container mx-16">
-      {/* <main className={styles.main}> */}
-        {writingPosts.map((post) =>
+        {notes.map((post) =>
           <PostCard
             key={post.slug}
             title={post.data.title}
             date={post.data.date}
             description={post.data.description}
             slug={post.slug}
-            postType={PostType.Writing}
+            postType={PostType.Notes}
           />
         )}
-        {/* <Link href="https://google.com">Read MORE</Link> */}
       </main>
 
-      {/* <Link href="https://google.com">Read MORE</Link> */}
     </div>
   );
 }

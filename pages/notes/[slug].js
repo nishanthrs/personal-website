@@ -11,7 +11,7 @@ import gfm from 'remark-gfm';
 import {PostType} from '../../types/post';
 
 export const getStaticPaths = async () => {
-  const posts = await getPosts(PostType.Writing);
+  const posts = await getPosts(PostType.Notes);
   const paths = posts.map((post) => ({ params: { slug: post.slug } }));
   return {
     paths,
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
+  const post = await getPost(PostType.Notes, params.slug);
   const mdxSource = await serialize(post.content);
   return {
     props: {

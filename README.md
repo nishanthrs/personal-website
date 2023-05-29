@@ -40,7 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 **Can't import module fs**:
   * Means modules were not imported correctly due to:
     * Incorrect path
-    * Attempt to import server-side types into client-side (i.e. types from getPosts.js imported into writing.tsx)
+    * Attempt to import server-side types into client-side (i.e. types from getPosts.js imported into notes.tsx)
     * https://stackoverflow.com/questions/70899450/nodejs-next-cannot-import-object-from-module-module-not-found-cant-resolve
 
 **Clickable link area outside of text**:

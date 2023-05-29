@@ -1,5 +1,5 @@
 export const enum PostType {
-  Writing = "writing",
+  Notes = "notes",
   Projects = "projects",
 };
 

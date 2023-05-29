@@ -1,7 +1,23 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+
+import AboutDesc from './about_desc.mdx';
+import styles from '../styles/Home.module.css';
+
 
 export default function Home() {
+  const homeHeader = (
+    <header>
+        <h2>👋 Hi, I'm Nishanth!</h2>
+        I like to work on and write about software,
+    </header>
+  );
+  const aboutHeader = (
+    <header>
+        <h2>👋 Hi, I'm Nishanth!</h2>
+    </header>
+  );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,30 +27,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {/* <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1> */}
-
         <div className={styles.pic_layout}>
           <img className={styles.profile_pic} src="/ns_profile_pic.jpg" alt="Avatar"/>
         </div>
-
-        <p className={styles.description}>
-          {/* Just trying to make sense of this crazy world.
-          Know the ledge. */}
-          Yup, yet another personal website.
-          <br></br>
-        </p>
-
-        <a>
-          It's cool to learn and do stuff outside of work. And to write about it.
-          <br></br>
-          <br></br>
-        </a>
-
-        <a>
-          Maybe you'll even find some of my projects or writing interesting. Check it out.
-        </a>
+        <article className="prose prose-lg dark:prose-invert text-center">
+          {aboutHeader}
+        </article>
+        <article className="prose prose-lg dark:prose-invert">
+          <AboutDesc />
+        </article>
       </main>
 
       {/* <footer className={styles.footer}>
