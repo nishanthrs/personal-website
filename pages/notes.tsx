@@ -26,6 +26,14 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className="flex justify-center">
+        <article className="prose prose-md dark:prose-invert text-center">
+          <header>
+            <h1>All Notes</h1>
+          </header>
+        </article>
+      </div>
+
       <main className="container mx-16">
         {notes.map((post) =>
           <PostCard

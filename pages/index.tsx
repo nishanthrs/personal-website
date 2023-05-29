@@ -9,12 +9,6 @@ export default function Home() {
   const homeHeader = (
     <header>
         <h2>👋 Hi, I'm Nishanth!</h2>
-        I like to work on and write about software,
-    </header>
-  );
-  const aboutHeader = (
-    <header>
-        <h2>👋 Hi, I'm Nishanth!</h2>
     </header>
   );
 
@@ -31,7 +25,7 @@ export default function Home() {
           <img className={styles.profile_pic} src="/ns_profile_pic.jpg" alt="Avatar"/>
         </div>
         <article className="prose prose-lg dark:prose-invert text-center">
-          {aboutHeader}
+          {homeHeader}
         </article>
         <article className="prose prose-lg dark:prose-invert">
           <AboutDesc />

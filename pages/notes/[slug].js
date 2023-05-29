@@ -9,6 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 
 import {PostType} from '../../types/post';
+import PostImage from "../../components/PostImage";
 
 export const getStaticPaths = async () => {
   const posts = await getPosts(PostType.Notes);
@@ -26,20 +27,20 @@ export const getStaticProps = async ({ params }) => {
     props: {
       data: post.data,
       content: mdxSource,
-      rawContent: post.content,
     },
   };
 };
 
-function Post({ data, content, rawContent }) {
+const components = {PostImage};
+
+function Post({ data, content }) {
   return (
     <div className="ml-12">
       <h1 className="font-bold text-7xl mt-24">{data.title}</h1>
       <time className="text-gray-500 italic mb-12">{data.date}</time>
-      {/* Useless fucking lib; doesn't even work: <MDXRemote {...content} /> */}
-
+      {/* For some reason, article tag is needed to render markdown content correctly */}
       <article className="prose dark:prose-invert prose-a:text-blue-400">
-        <ReactMarkdown remarkPlugins={[gfm]}>{rawContent}</ReactMarkdown>
+        <MDXRemote {...content} components={components} />
       </article>
     </div>
   );
