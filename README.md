@@ -46,3 +46,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 **Clickable link area outside of text**:
   * Heading tag inside anchor tag
   * https://stackoverflow.com/questions/68015331/why-is-my-link-clickable-outside-the-linked-text
+  * None of the above points were the issues. The issue was instead b/c of bad CSS styling in the `nav_header` style in Home.module.css. There was a field: `bottom: 10px`, which was taking up the entire left side and rendering the links on the left side unclickable. I used 'Inspect' to highlight the layout of each component on the page to find the problem.

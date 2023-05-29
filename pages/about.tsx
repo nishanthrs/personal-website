@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 
 import Head from 'next/head'
 import AboutDesc from './about_desc.mdx';
+import Link from "next/link";
 
 export default function About() {
     const aboutHeader = (
