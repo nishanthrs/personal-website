@@ -32,16 +32,18 @@ const components = {PostImage};
 
 function Post({ data, content }) {
   return (
-    <div className="mx-8 flex flex-wrap">
-      <div>
+    <div>
+      <div className="mx-8">
         <h3 className="font-bold text-5xl mb-2">{data.title}</h3>
         <time className="text-gray-500 italic mb-2">{data.date}</time>
         <p className="text-gray-500 italic mb-4">Time to read: {data.time_to_read}</p>
       </div>
       {/* For some reason, article tag is needed to render markdown content correctly */}
-      <article className="prose dark:prose-invert prose-a:text-blue-400">
-        <MDXRemote {...content} components={components} />
-      </article>
+      <div className="mx-8 flex flex-wrap">
+        <article className="prose dark:prose-invert prose-a:text-blue-400">
+          <MDXRemote {...content} components={components} />
+        </article>
+      </div>
     </div>
   );
 }
