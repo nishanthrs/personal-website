@@ -21,7 +21,7 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
   return (
     <div>
       <Head>
-        <title>Nishanth Salinamakki's Website</title>
+        <title>Nishanth Salinamakki&apos;s Website</title>
         <meta name="description" content="Personal blog and repo" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
