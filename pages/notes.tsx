@@ -19,7 +19,7 @@ export const getStaticProps = () => {
 
 export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Nishanth Salinamakki's Website</title>
         <meta name="description" content="Personal blog and repo" />
@@ -41,6 +41,7 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
             title={post.data.title}
             date={post.data.date}
             description={post.data.description}
+            time_to_read={post.data.time_to_read}
             slug={post.slug}
             postType={PostType.Notes}
           />

@@ -5,9 +5,6 @@ import getPost from "../../helpers/getPost";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
-import ReactMarkdown from 'react-markdown';
-import gfm from 'remark-gfm';
-
 import {PostType} from '../../types/post';
 import PostImage from "../../components/PostImage";
 
@@ -35,9 +32,12 @@ const components = {PostImage};
 
 function Post({ data, content }) {
   return (
-    <div className="ml-12">
-      <h1 className="font-bold text-7xl mt-24">{data.title}</h1>
-      <time className="text-gray-500 italic mb-12">{data.date}</time>
+    <div className="mx-8 flex flex-wrap">
+      <div>
+        <h3 className="font-bold text-5xl mb-2">{data.title}</h3>
+        <time className="text-gray-500 italic mb-2">{data.date}</time>
+        <p className="text-gray-500 italic mb-4">Time to read: {data.time_to_read}</p>
+      </div>
       {/* For some reason, article tag is needed to render markdown content correctly */}
       <article className="prose dark:prose-invert prose-a:text-blue-400">
         <MDXRemote {...content} components={components} />

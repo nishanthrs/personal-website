@@ -52,3 +52,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * Include a time-to-read section on each post
 * Image header on each post (add image as a component and put it in MDX file -- HTML doesn't work with MDX, only JSX)
 * Include tags (and search by tags once you have enough posts)
+* Test and make sure it appears ok on mobile
+* Deploy using Vercel (after writing a post or two and making sure it looks good)
