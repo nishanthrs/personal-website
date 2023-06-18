@@ -13,8 +13,8 @@ type PostCardProps = {
 
 function PostCard({ title, date, description, time_to_read, slug, postType }: PostCardProps) {
   return (
-    <div className="flow-root border-b">
-      <div className="float-left py-4">
+    <div className="flex justify-center flow-root border-b">
+      <div className="float-left my-4">
         <h2 className="font-bold text-2xl">{title}</h2>
         <time className="text-gray-400">{date}</time>
         <p className="text-gray-400 italic">Time to read: {time_to_read}</p>
@@ -24,7 +24,7 @@ function PostCard({ title, date, description, time_to_read, slug, postType }: Po
           <p className="text-blue-500 mt-4 mb-2 block">Read more</p>
         </Link>
       </div>
-      <div className="float-right mx-8">
+      <div className="float-right invisible md:visible my-8 w-28 h-28">
         <PostImage imageSrc="/hello_world_note_img.png" />
       </div>
     </div>

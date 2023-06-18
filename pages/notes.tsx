@@ -34,7 +34,7 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
         </article>
       </div>
 
-      <main className="container mx-16">
+      <div className="mx-12">
         {notes.map((post) =>
           <PostCard
             key={post.slug}
@@ -46,7 +46,7 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
             postType={PostType.Notes}
           />
         )}
-      </main>
+      </div>
 
     </div>
   );

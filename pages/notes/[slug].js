@@ -1,5 +1,6 @@
 // TODO: Convert this to tsx file like here: https://github.com/vercel/next.js/blob/canary/examples/blog-starter/pages/posts/%5Bslug%5D.tsx
 
+import Image from "next/image";
 import {getPosts} from "../../helpers/getPosts";
 import getPost from "../../helpers/getPost";
 import { serialize } from "next-mdx-remote/serialize";
@@ -28,7 +29,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-const components = {PostImage};
+const components = {Image, PostImage};
 
 function Post({ data, content }) {
   return (

@@ -49,8 +49,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   * None of the above points were the issues. The issue was instead b/c of bad CSS styling in the `nav_header` style in Home.module.css. There was a field: `bottom: 10px`, which was taking up the entire left side and rendering the links on the left side unclickable. I used 'Inspect' to highlight the layout of each component on the page to find the problem.
 
 ## TODO
-* Include a time-to-read section on each post
-* Image header on each post (add image as a component and put it in MDX file -- HTML doesn't work with MDX, only JSX)
 * Include tags (and search by tags once you have enough posts)
-* Test and make sure it appears ok on mobile
-* Deploy using Vercel (after writing a post or two and making sure it looks good)
+* Fix layout of website on mobile (looks like dogshit right now; margins are all fucked up)
+* Apply color styling to links and header text (blue/purple gradients)

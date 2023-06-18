@@ -20,17 +20,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <div className="flex flex-wrap justify-center">
         <div className={styles.pic_layout}>
           <Image width={150} height={150} className="rounded-full" src="/ns_profile_pic.jpg" alt="" />
         </div>
-        <article className="prose prose-lg dark:prose-invert text-center">
-          {homeHeader}
-        </article>
-        <article className="prose prose-lg dark:prose-invert">
-          <AboutDesc />
-        </article>
-      </main>
+      </div>
+      <article className="prose prose-lg dark:prose-invert text-center">
+        {homeHeader}
+      </article>
+      <article className="prose prose-lg dark:prose-invert">
+        <AboutDesc />
+      </article>
 
       {/* <footer className={styles.footer}>
         <a
