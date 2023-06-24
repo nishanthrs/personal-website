@@ -25,12 +25,16 @@ export default function Home() {
           <Image width={150} height={150} className="rounded-full" src="/ns_profile_pic.jpg" alt="" />
         </div>
       </div>
-      <article className="prose prose-lg dark:prose-invert text-center">
-        {homeHeader}
-      </article>
-      <article className="prose prose-lg dark:prose-invert">
-        <AboutDesc />
-      </article>
+      <div className="flex flex-wrap justify-center">
+        <article className="prose prose-lg dark:prose-invert text-center">
+          {homeHeader}
+        </article>
+      </div>
+      <div className="flex flex-wrap justify-center">
+        <article className="prose prose-lg dark:prose-invert">
+          <AboutDesc />
+        </article>
+      </div>
 
       {/* <footer className={styles.footer}>
         <a

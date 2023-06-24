@@ -52,3 +52,4 @@
 * [Neel Nanda: Making Friends](https://www.neelnanda.io/blog/43-making-friends)
 * [Loss of Humanity through Consumerism in Wall-E](https://news.ycombinator.com/item?id=34762251)
 * [Is More Childhood Independence the Answer to Mental Health Problems?](https://www.kqed.org/mindshift/60624/young-adults-are-struggling-with-their-mental-health-is-more-childhood-independence-the-answer)
+* [Behind-the-Scenes Work](https://xkcd.com/1741/)
