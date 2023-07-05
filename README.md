@@ -50,5 +50,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 * Include tags (and search by tags once you have enough posts)
-* Fix layout of website on mobile (looks like dogshit right now; margins are all fucked up)
 * Apply color styling to links and header text (blue/purple gradients)

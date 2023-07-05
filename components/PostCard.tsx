@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PostType } from "../types/post";
 import PostImage from '../components/PostImage';
+import { cyanGradientTextStyle } from '../styles/colors';
 
 type PostCardProps = {
     title: string;
@@ -15,16 +16,14 @@ function PostCard({ title, date, description, time_to_read, slug, postType }: Po
   return (
     <div className="flex justify-center flow-root border-b">
       <div className="float-left my-4">
-        <h2 className="font-bold text-2xl">{title}</h2>
+        <Link href={`/${postType}/[slug]`} as={`/${postType}/${slug}`}>
+          <h2 className={cyanGradientTextStyle + "font-bold text-2xl"}>{title}</h2>
+        </Link>
         <time className="text-gray-400">{date}</time>
         <p className="text-gray-400 italic">Time to read: {time_to_read}</p>
         <p className="mt-2">{description}</p>
-
-        <Link href={`/${postType}/[slug]`} as={`/${postType}/${slug}`}>
-          <p className="text-blue-500 mt-4 mb-2 block">Read more</p>
-        </Link>
       </div>
-      <div className="float-right invisible md:visible my-8 w-28 h-28">
+      <div className="float-right invisible md:visible my-8 w-24 h-24">
         <PostImage imageSrc="/hello_world_note_img.png" />
       </div>
     </div>

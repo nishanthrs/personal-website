@@ -3,8 +3,6 @@ import { InferGetStaticPropsType } from 'next'
 import PostCard from '../components/PostCard';
 import {PostType} from '../types/post';
 import Head from 'next/head';
-import Link from "next/link";
-import styles from '../styles/Home.module.css'
 
 
 export const getStaticProps = () => {

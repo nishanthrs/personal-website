@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   const homeHeader = (
     <header>
-        <h2>👋 Hi, I&apos;m Nishanth!</h2>
+      <h2>👋 Hi, I&apos;m Nishanth!</h2>
     </header>
   );
 
