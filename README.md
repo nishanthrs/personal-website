@@ -50,4 +50,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 * Include tags (and search by tags once you have enough posts)
-* Apply color styling to links and header text (blue/purple gradients)
+* Apply color styling to header text (blue/purple gradients)

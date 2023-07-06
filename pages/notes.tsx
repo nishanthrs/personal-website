@@ -3,6 +3,7 @@ import { InferGetStaticPropsType } from 'next'
 import PostCard from '../components/PostCard';
 import {PostType} from '../types/post';
 import Head from 'next/head';
+import { indigoTextHeaderStyle } from '../styles/colors';
 
 
 export const getStaticProps = () => {
@@ -27,7 +28,7 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
       <div className="flex justify-center">
         <article className="prose prose-md dark:prose-invert text-center">
           <header>
-            <h1>All Notes</h1>
+            <h1 className={indigoTextHeaderStyle}>All Notes</h1>
           </header>
         </article>
       </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PostType } from "../types/post";
 import PostImage from '../components/PostImage';
-import { cyanGradientTextStyle } from '../styles/colors';
+import { blueTextLinkHoverStyle, indigoTextLinkHoverStyle } from '../styles/colors';
 
 type PostCardProps = {
     title: string;
@@ -17,7 +17,7 @@ function PostCard({ title, date, description, time_to_read, slug, postType }: Po
     <div className="flex justify-center flow-root border-b">
       <div className="float-left my-4">
         <Link href={`/${postType}/[slug]`} as={`/${postType}/${slug}`}>
-          <h2 className={cyanGradientTextStyle + "font-bold text-2xl"}>{title}</h2>
+          <h2 className={blueTextLinkHoverStyle + " font-bold text-2xl"}>{title}</h2>
         </Link>
         <time className="text-gray-400">{date}</time>
         <p className="text-gray-400 italic">Time to read: {time_to_read}</p>
