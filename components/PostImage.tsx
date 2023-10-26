@@ -13,7 +13,8 @@ function PostImage({imageSrc}: PostImageProps) {
         width={200}
         height={200}
         quality={100}
-        className="object-scale-down object-[100%_-50px]"
+        // Below line needed to focus on specific non-center part of the image
+        // className="object-scale-down object-[100%_-50px]"
         src={imageSrc}
         alt="Rounded Image"
       />

@@ -10,9 +10,10 @@ type PostCardProps = {
     time_to_read: string;
     slug: string;
     postType: PostType;
+    postImagePath: string;
 }
 
-function PostCard({ title, date, description, time_to_read, slug, postType }: PostCardProps) {
+function PostCard({ title, date, description, time_to_read, slug, postType, postImagePath }: PostCardProps) {
   return (
     <div className="flex justify-center flow-root border-b">
       <div className="float-left my-4">
@@ -24,7 +25,7 @@ function PostCard({ title, date, description, time_to_read, slug, postType }: Po
         <p className="mt-2">{description}</p>
       </div>
       <div className="float-right invisible md:visible my-8 w-24 h-24">
-        <PostImage imageSrc="/hello_world_note_img.png" />
+        <PostImage imageSrc={postImagePath} />
       </div>
     </div>
   );
