@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PostType } from "../types/post";
 import PostImage from '../components/PostImage';
-import { blueTextLinkHoverStyle, indigoTextLinkHoverStyle } from '../styles/colors';
+import { blueTextLinkHoverStyle } from '../styles/colors';
 
 type PostCardProps = {
     title: string;

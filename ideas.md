@@ -23,6 +23,12 @@
 * [Simon Willison: Website Analytics](https://simonwillison.net/2023/Feb/17/analytics/)
 * [Run CLIP on iPhone to Search Photos](https://mazzzystar.github.io/2022/12/29/Run-CLIP-on-iPhone-to-Search-Photos/)
 
+## Software Research
+
+**Leaps of insight and cool research in the realm of software!**
+
+* [How Claude Shannon Invented the Future](https://www.quantamagazine.org/how-claude-shannons-information-theory-invented-the-future-20201222/)
+
 ## Business and Finance
 
 **How do you understand and measure the quality of a business? Also cool business stories.**
@@ -36,6 +42,7 @@
 * [Bain: Selling to Small Business is a Huge Untapped Market](https://www.bain.com/insights/underserved-selling-to-small-businesses-is-a-huge-untapped-market/)
 * [Clayton Christensen: Know Your Customers' Job to be Done](https://hbr.org/2016/09/know-your-customers-jobs-to-be-done)
 * [Search Wars: The Inference Cost of Search Disruption via LLMs](https://www.semianalysis.com/p/the-inference-cost-of-search-disruption)
+* [Google: We Have No Moat, and Neither Does OpenAI](https://www.semianalysis.com/p/google-we-have-no-moat-and-neither)
 
 ## Org and Management Theory
 
@@ -53,3 +60,6 @@
 * [Loss of Humanity through Consumerism in Wall-E](https://news.ycombinator.com/item?id=34762251)
 * [Is More Childhood Independence the Answer to Mental Health Problems?](https://www.kqed.org/mindshift/60624/young-adults-are-struggling-with-their-mental-health-is-more-childhood-independence-the-answer)
 * [Behind-the-Scenes Work](https://xkcd.com/1741/)
+* [Hank Asher: The Man Who Trapped Us in Databases](https://web.archive.org/web/20230922141816/https://www.nytimes.com/2023/09/22/magazine/hank-asher-data.html)
+* [A Letter to a Nun in Africa: Why Explore Space?](https://launiusr.wordpress.com/2012/02/08/why-explore-space-a-1970-letter-to-a-nun-in-africa/)
+* [Why Do Rich People Love Endurance Sports?](https://news.ycombinator.com/item?id=19016362&p=2)
