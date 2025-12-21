@@ -4,11 +4,18 @@
 
 **What is the technical knowledge behind the best software systems? How did these brilliant engineers solve such challenging problems?**
 
-* [Jane Street: Probability and Markets Guide](https://www.janestreet.com/static/pdfs/trading-interview.pdf?utm_source=web&utm_medium=pdf&utm_campaign=probability_markets_guide)
+* [CPU Performance](https://curiouscoding.nl/posts/cpu-benchmarks/#memory-bandwidth)
 * [Dropbox: How Image Search Works](https://dropbox.tech/machine-learning/how-image-search-works-at-dropbox)
+* [Rerankers: Information Retrieval Pipeline (Search and RAG) Package](https://www.answer.ai/posts/2024-09-16-rerankers.html)
 * [Design and Dev of a Bootstrapped Website](https://casparwre.de/blog/webapp-python-deployment/)
 * [How to Write Fast Matrix Multiplication from Scratch](https://alexarmbr.github.io/2024/08/10/How-To-Write-A-Fast-Matrix-Multiplication-From-Scratch-With-Tensor-Cores.html#introduction)
 * [40x Faster Binary Search with Static Search Trees](https://curiouscoding.nl/posts/static-search-tree/)
+* [How to Optimize a CUDA Matmul Kernel: A Worklog](https://siboehm.com/articles/22/CUDA-MMM)
+* [All About TPUs and GPUs](https://jax-ml.github.io/scaling-book/tpus/)
+* [Basic Facts About GPUs](https://damek.github.io/random/basic-facts-about-gpus/)
+* [Parallel Programming in GPUs Lectures](https://www.youtube.com/watch?v=CEXQNRINjYE&list=PLRRuQYjFhpmvu5ODQoY2l7D0ADgWEcYAX&index=3)
+* [FlashAttention Explained](https://damek.github.io/random/basic-idea-behind-flash-attention/)
+* [Jane Street: Probability and Markets Guide](https://www.janestreet.com/static/pdfs/trading-interview.pdf?utm_source=web&utm_medium=pdf&utm_campaign=probability_markets_guide)
 
 ## Software Engineering: Thoughts and Theory
 
@@ -17,6 +24,7 @@
 * [Time Farrell: Product Ops vs Dev](https://tmfarrell.github.io/writing/2022/03/24/ops_v_dev/)
 * [Maybe People Do Care about Performance and Reliability](https://buttondown.email/hillelwayne/archive/maybe-people-do-care-about-performance-and/)
 * [Pragmatic Engineer: Becoming a Better Writer](https://blog.pragmaticengineer.com/becoming-a-better-writer-in-tech/)
+* [What We Learned from a Failed Infra Devtool](https://briefer.cloud/blog/posts/pivoting-from-infra/)
 
 ## Software Engineering: Interesting Projects
 
@@ -47,6 +55,7 @@
 * [Search Wars: The Inference Cost of Search Disruption via LLMs](https://www.semianalysis.com/p/the-inference-cost-of-search-disruption)
 * [Google: We Have No Moat, and Neither Does OpenAI](https://www.semianalysis.com/p/google-we-have-no-moat-and-neither)
 * [The AI Inference Market: GPT-5 vs Claude](https://substack.com/home/post/p-166599600)
+* [The Short Case for Nvidia](https://youtubetranscriptoptimizer.com/blog/05_the_short_case_for_nvda)
 
 ## Org and Management Theory
 
@@ -62,6 +71,7 @@
   * **TODO: Next topic to write about!**
   * [Spaced Repetition](https://notes.andymatuschak.org/Spaced_repetition_memory_system)
   * [Learning General Relativity in 24 Hrs](https://www.youtube.com/watch?v=KEce3se9bMI)
+  * [Learning How to Learn](https://www.neelnanda.io/blog/34-learning)
   * [Dwarkesh on Learning Everything](https://www.youtube.com/watch?v=Vm49oIPtyRE)
   * Then write about how you created a simple tool to automate spaced repetition card generation to help you understand+retain more of what you consume
 * [40 Phenomena You Should Know](https://gurwinder.substack.com/p/40-useful-concepts-you-should-know)
