@@ -24,6 +24,7 @@
 
 * [Simon Willison: Website Analytics](https://simonwillison.net/2023/Feb/17/analytics/)
 * [Run CLIP on iPhone to Search Photos](https://mazzzystar.github.io/2022/12/29/Run-CLIP-on-iPhone-to-Search-Photos/)
+* [Hachi: an Image Search Engine](https://eagledot.xyz/hachi.md.html)
 
 ## Software Research
 
@@ -57,6 +58,12 @@
 
 **More on the side of interesting, fun facts about mental models**
 
+* Metalearning
+  * **TODO: Next topic to write about!**
+  * [Spaced Repetition](https://notes.andymatuschak.org/Spaced_repetition_memory_system)
+  * [Learning General Relativity in 24 Hrs](https://www.youtube.com/watch?v=KEce3se9bMI)
+  * [Dwarkesh on Learning Everything](https://www.youtube.com/watch?v=Vm49oIPtyRE)
+  * Then write about how you created a simple tool to automate spaced repetition card generation to help you understand+retain more of what you consume
 * [40 Phenomena You Should Know](https://gurwinder.substack.com/p/40-useful-concepts-you-should-know)
 * [Howard Marks: The Illusion of Knowledge](https://www.oaktreecapital.com/insights/memo/the-illusion-of-knowledge)
 * [Neel Nanda: Making Friends](https://www.neelnanda.io/blog/43-making-friends)
