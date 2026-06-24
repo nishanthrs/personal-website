@@ -16,7 +16,6 @@ export default function Layout({ children }: LayoutProps) {
         </div>
         <div className={`${styles.nav} flex items-center`}>
           <Link href="/notes" className="no-underline hover:underline mr-4">Notes</Link>
-          <Link href="/projects" className="no-underline hover:underline mr-4">Projects</Link>
           <ThemeToggle />
         </div>
         <hr className="mx-8 my-14 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
