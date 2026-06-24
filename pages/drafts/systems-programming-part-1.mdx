@@ -1,0 +1,35 @@
+---
+title: "Systems Programming: Processes"
+date: '2026/06/24'
+description: 'First part in a series about low-level systems programming, performance engineering, and CPU architecture'
+time_to_read: '~10 minutes'
+---
+
+import PostLayout from '../../components/PostLayout'
+
+export default function MDXPage({ children }) {
+  return <PostLayout frontmatter={frontmatter}>{children}</PostLayout>
+}
+
+<h2 className="text-sky-400">
+  Why Learn Systems Programming?
+</h2>
+A big part of my job at Instagram is optimizing the performance of our recommendation system.
+Instagram's recommendation CPU backend alone costs several hundreds of millions of dollars to run, so even a small % win
+can save millions of dollars. With the exponentially rising demand for compute, performance work like this becomes vital.
+
+Although we sometimes uncover embarrassing bottlenecks and the codebase can definitely be a mess at times,
+**most of the low-hanging fruit for optimization opportunities is gone.** We've stripped out all the unnecessary
+application work, the C++ code is well-tuned to avoid any obvious bad patterns (inefficient std lib data structures,
+expensive vector and string copies, unnecessary shared pointers), used high-throughput thread pool algos like work-stealing,
+eliminating unnecessary memory copies, and using arena/pool memory allocators with huge pages.
+
+To get significant performance wins requires an even deeper understanding of the system,
+which means peeling away all the layers of abstraction, all the way down to the
+CPU hardware. Thus, it's become important for me to fully understand all the scary parts of low-level programming.
+
+<h2 className="text-sky-400">
+  Processes vs Threads vs Cores
+</h2>
+
+TODO

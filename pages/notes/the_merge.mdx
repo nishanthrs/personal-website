@@ -5,6 +5,12 @@ description: 'The future of humanity is cyberization: the merge of humans and te
 time_to_read: '~5 minutes'
 ---
 
+import PostLayout from '../../components/PostLayout'
+
+export default function MDXPage({ children }) {
+  return <PostLayout frontmatter={frontmatter}>{children}</PostLayout>
+}
+
 > There was an article in Scientific American about the efficiency of locomotion of different species on the planet.
 In other words, they measured how much energy it took a bird to get from point A to B, and then a fish, and goat, and so on and ranked them.
 It turns out the condor won. Man came in with a rather unimpressive showing of a third of the way down the list.

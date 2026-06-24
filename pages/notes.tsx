@@ -18,7 +18,7 @@ export const getStaticProps = () => {
 
 export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col">
       <Head>
         <title>Nishanth Salinamakki&apos;s Website</title>
         <meta name="description" content="Personal blog and repo" />
@@ -43,7 +43,6 @@ export default function Notes({notes}: InferGetStaticPropsType<typeof getStaticP
             time_to_read={post.data.time_to_read}
             slug={post.slug}
             postType={PostType.Notes}
-            postImagePath={post.data.post_image_path}
           />
         )}
       </div>

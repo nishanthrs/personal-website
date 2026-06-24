@@ -5,6 +5,12 @@ description: 'Testing out a sample post'
 time_to_read: '< 1 minute'
 ---
 
+import PostLayout from '../../components/PostLayout'
+
+export default function MDXPage({ children }) {
+  return <PostLayout frontmatter={frontmatter}>{children}</PostLayout>
+}
+
 ### First One!
 
 Put it off for long enough. I finally set up the website! Time to start writing and creating.

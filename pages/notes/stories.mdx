@@ -5,6 +5,12 @@ description: 'Stories are the software of our society.'
 time_to_read: '~6 minutes'
 ---
 
+import PostLayout from '../../components/PostLayout'
+
+export default function MDXPage({ children }) {
+  return <PostLayout frontmatter={frontmatter}>{children}</PostLayout>
+}
+
 > Modern nation states cannot ask people to die anymore, for a king or glory or whatever.
 Modern nation states ask people to die for a story, for an ideal. The reason why we're asked to die all the time
 by nation states is for a story, a collective story that we all believe in, that we think is worth it.

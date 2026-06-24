@@ -5,6 +5,12 @@ description: 'How do you solve tough problems with creative and original solutio
 time_to_read: '~5 minutes'
 ---
 
+import PostLayout from '../../components/PostLayout'
+
+export default function MDXPage({ children }) {
+  return <PostLayout frontmatter={frontmatter}>{children}</PostLayout>
+}
+
 > Yes, the solution seems to work, it appears to be correct; but how is it possible to invent such a solution?
   Yes, this experiment seems to work, this appears to be a fact; but how can people discover such facts?
   And how could I invent or discover such things by myself?
