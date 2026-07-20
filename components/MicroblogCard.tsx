@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import type { LinkPreview } from "../helpers/getLinkPreview";
+import { blueTextLinkHoverStyle } from "../styles/colors";
 
 type MicroblogCardProps = {
   title: string;
@@ -8,11 +9,21 @@ type MicroblogCardProps = {
   Content: ComponentType;
   // Optional link previews (favicon + page title) resolved at build time.
   links?: LinkPreview[];
+  // Optional tags rendered bottom-right; clicking one filters the feed.
+  tags?: string[];
+  onTagClick?: (tag: string) => void;
 };
 
 // Unlike PostCard (which links out to a standalone note page), a microblog card
 // renders the full content of its small MDX file inline.
-function MicroblogCard({ title, date, Content, links }: MicroblogCardProps) {
+function MicroblogCard({
+  title,
+  date,
+  Content,
+  links,
+  tags,
+  onTagClick,
+}: MicroblogCardProps) {
   return (
     <div className="border rounded-lg p-6 my-6 shadow-sm">
       <h2 className="font-bold text-2xl mb-1">{title}</h2>
@@ -42,6 +53,20 @@ function MicroblogCard({ title, date, Content, links }: MicroblogCardProps) {
                 {link.title}
               </span>
             </a>
+          ))}
+        </div>
+      )}
+      {tags && tags.length > 0 && (
+        <div className="mt-4 flex flex-wrap justify-end gap-x-3 gap-y-1">
+          {tags.map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              onClick={() => onTagClick?.(tag)}
+              className={blueTextLinkHoverStyle + " text-sm"}
+            >
+              #{tag}
+            </button>
           ))}
         </div>
       )}

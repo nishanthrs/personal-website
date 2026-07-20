@@ -4,6 +4,9 @@ date: '2026/07/15'
 links:
   - 'https://www.redhat.com/en/blog/topology-aware-scheduling-in-kubernetes-part-1-the-high-level-business-case'
   - 'https://ronaknathani.com/blog/2026/05/keeping-gpu-workloads-numa-local-in-kubernetes/'
+tags:
+  - 'kubernetes'
+  - 'cpu'
 ---
 
 I was reading about Kubernetes workload scheduling and came across topology-aware scheduling. What the hell is topology?
@@ -12,13 +15,13 @@ How does it factor into how workloads are scheduled onto nodes? Apparently it's 
 It turns out that modern CPUs divide their resources into NUMA nodes. Each NUMA node has its own CPU cores, local RAM,
 and PCIe bus to network and disk and GPUs. NUMA nodes are connected to each other via CPU interconnects.
 This topology prevents traffic jams in memory bandwidth, but a CPU in NUMA node #1 accessing memory in NUMA node #2
-is much slower (3x slower in AMD EPYC CPUs). Therefore, for high-performance and low-latency workloads, it's better to
-schedule an entire workload onto one NUMA node. For GPU workloads, the CPUs and GPU resources must be co-located on the
+is much slower (3x slower in AMD EPYC CPUs). **Therefore, for high-performance and low-latency workloads, it's better to
+schedule an entire workload onto one NUMA node.** For GPU workloads, the CPUs and GPU resources must be co-located on the
 same NUDA node for maximum throughput and lowest latency.
 
 ![CPUs and GPUs NUMA Topology](/numa_topology.png)
 
 Kubernetes has to offer topology-aware scheduling so that its workload scheduler can take NUMA nodes into account when
 deciding which resources to assign to a workload. Otherwise, it can schedule CPU cores on different NUMA nodes or its
-CPU cores on one NUMA node and its GPUs on another NUMA node, slowing down the access time of RAM or the latency of
-CPU assigning tasks to the GPU.
+CPU cores on one NUMA node and its GPUs on another NUMA node, significantly slowing down the access time of RAM or the
+latency of CPU assigning tasks to the GPU.
