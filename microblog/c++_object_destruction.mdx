@@ -1,0 +1,32 @@
+---
+title: 'C++ Object Destruction'
+date: '2026/07/17'
+links:
+  - 'https://www.reddit.com/r/rust/comments/z26wm5/is_vector_of_vectors_vecvec_inefficient/'
+---
+
+I never realized how expensive destroying C++ objects could be until I noticed that a particular task in our recommendation task
+orchestration engine was taking up 50% of its CPU cycles! I did some digging into why this was the case and realized that
+the data structure (API response) had tons of nested vectors and hashmaps:
+```cpp
+struct RankingResult {
+  list<list<list<double>>> termValues;
+  list<list<list<string>>> termLabels;
+  list<list<list<EventWeightsMap>>> eventWeightsMap;
+  list<i64> entities;
+  list<double> entityScores;
+  ...
+}
+```
+
+Turns out that destroying nested containers are super expensive:
+* Each of the nested vectors within a larger vector aren't guaranteed to be close together in memory.
+This completely destroys cache locality and forces a lot of [pointer chasing](https://lwn.net/Articles/509416/).
+* Freeing the whole vector requires separate free syscalls for each nested vector. When there are lots
+of nested vectors, the overhead of making a syscall to free up each vector adds up.
+
+The best way to mitigate this:
+* Use a single flat vector to store all the data.
+* Use arena allocation to allocate and free nested data structures to reduce the number of syscalls.
+
+Using an arena allocator is an interesting and promising solution here. Maybe I should pursue that.
