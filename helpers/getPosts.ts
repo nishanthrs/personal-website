@@ -4,8 +4,8 @@ import * as path from 'path';
 
 import {PostType, PostData} from '../types/post';
 
-export function getPosts(postType: PostType): PostData[] {
-  const postsDir = path.join("pages", postType);
+export function getPosts(postType: PostType, rootDir: string = "pages"): PostData[] {
+  const postsDir = path.join(rootDir, postType);
   const files = fs.readdirSync(postsDir).filter(
     (file) => file.includes(".mdx")
   );
