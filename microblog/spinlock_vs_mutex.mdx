@@ -1,0 +1,28 @@
+---
+title: 'Spinlock vs Mutex'
+date: '2026/07/17'
+links:
+  - 'https://matklad.github.io/2020/01/04/mutexes-are-faster-than-spinlocks.html'
+  - 'https://stackoverflow.com/questions/5869825/when-should-one-use-a-spinlock-instead-of-mutex'
+---
+
+After diving into some codebases today, I started looking into locks and how code was synchronized.
+I never realized how many freaking locks there are in the folly C++ library, but there are two main ones
+I needed to understand: spinlocks and shared mutexes.
+
+Let's say a thread is currently executing a critical section and is locked behind a spinlock: `folly::SpinLock`.
+If another thread hits the critical section and is blocked by the spinlock, it'll continue *spinning* or burning
+CPU cycles until it's unlocked. However, if we use a shared mutex: `folly::SharedMutex`, the blocked thread will
+start spinning very briefly, then yield preemptively to the scheduler (`futex`) to start executing another thread,
+and wait until mutex is unlocked.
+
+Spinlocks usually don't work well in multithreaded services (> 1 thread per core) because they hog the CPU for
+useless work and sacrifice throughput. Spinlocks also suck under high contention because they thrash the CPU cache.
+
+At first, it seems like spinlocks are great for extremely short critical sections since putting a mutex to sleep and waking it up again is wasted overhead.
+
+However, it's possible that thread A gets preempted in the middle of executing its critical section, leaving the blocked
+threads spinning endlessly until thread A resumes again. In the worst scenarios, thread A may not even resume again since
+the blocked threads are hogging the CPU. This can drive up spinlock tail latencies a lot.
+On top of that, since `folly::SharedMutex` specifically operates like a *hybrid* mutex and spins initially, this overhead is mostly avoided anyways.
+It seems like the recommendation is to never use spinlocks in user-space code.
